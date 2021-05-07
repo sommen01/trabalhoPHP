@@ -51,12 +51,40 @@ include_once "menu.php";
                                 <div class="form-group">
                                     <div class="input-group mb-2">
                                         <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fas fa-address-book text-info"></i></div>
+                                        </div>
+                                        <div class="container p-3 border">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" id="erros" name="categoria" value="Erros" style="margin-top: .3rem; margin-left: -1.25rem;" required>
+                                                <label class="form-check-label pl-2" for="erros">Erros e Problemas</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" class="form-check-input" id="sugestao" name="categoria" value="Sugestões" style="margin-top: .3rem; margin-left: -1.25rem" required>
+                                                <label for="sugestao" class="form-check-label pl-2">Sugestões</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" class="form-check-input" id="reclamacao" name="categoria" value="Reclamações" style="margin-top: .3rem; margin-left: -1.25rem" required>
+                                                <label for="reclamacao" class="form-check-label pl-2">Reclamações sobre o Serviço</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
                                             <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
                                         </div>
                                         <textarea class="form-control" placeholder="Escreva sua mensagem" name = "texto" required></textarea>
                                     </div>
                                 </div>
-
+                                <div class="form-group"> 
+                                    <?php 
+                                        if(isset($_SESSION["error"])){
+                                            echo $_SESSION["error"];
+                                            unset($_SESSION["error"]);
+                                        }
+                                    ?>
+                                </div>
                                 <div class="text-center">
                                     <input type="submit" value="Enviar" name="enviar" class="btn btn-info btn-block rounded-0 py-2">
                                 </div>
