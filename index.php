@@ -9,60 +9,54 @@ include_once "menu.php";
       <title>Inicio</title>
    </head>
    <body>
-      <!-- MAIN PAGE -->
-      <div class="text-center">
-         <div class="cover-container d-flex h-100 p-3 flex-column text-light" style="background: url('/trabalhoPhp/assets/img/background.jpg') no-repeat center center/cover;">
-            <p class="mb-auto"></p>
-            <div style="background-image: linear-gradient(to right, rgba(255,0,0,0), #000028);">
-               <h1 class="cover-heading display-1 font-weight-bold">TurbCar</h1>
-               <p class="lead">Se você busca fazer um bom negocio com preço baixo e qualidade, aqui é o melhor lugar para achar seu carro novo.</p>
-               <a class="btn btn-primary btn-lg" href="listaCarros.php" role="button">VEJA NOSSO CATÁLOGO</a>
-            </div>
-            <p class="mt-auto"></p>
-         </div>
-      </div>
-      <!-- JUMBOTRON -->
-      <div class="jumbotron bg-dark text-light m-0" style="background: linear-gradient(#000028, #280000);">
-         <div class="container text-center">
-            <h1 class="display-4 font-weight-bold">COMPRE CONOSCO</h1>
-            <p class="lead">Nossa missão é a satisafação do cliente, oferecendo serviço de qualidade com preço baixo.</p>
-            <a class="btn btn-secondary btn-lg" href="#">SOBRE NÓS</a>
-         </div>
-      </div>
-      <!-- CAROUSEL -->
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-         <!-- slides -->
-         <div class="carousel-inner">
-            <div class="carousel-item active">
-               <img src="/trabalhoPhp/assets/img/camaro.jpg" class="d-block w-100" >
-            </div>
-            <div class="carousel-item ">
-               <img src="/trabalhoPhp/assets/img/mustanggt.jpg" class="d-block w-100" >
-            </div>
-            <div class="carousel-item ">
-               <img src="/trabalhoPhp/assets/img/background.jpg" class="d-block w-100" >
+      <div class="jumbotron">
+         <h1 class="display-4">TurbCar</h1>
+         <p class="lead">O melhor lugar para achar seu carro novo</p>
+         <hr class="my-4">
+         <div class="card mb-3">
+            <img class="card-img-top" src="assets/img/mustanggt.jpg" alt="Card image cap">
+            <div class="card-body">
+               <h3 class="card-title">Mustang GT</h3>
+               <div class="container">
+                    <p class="card-text" >Cor: <h5 style="background-color:red; border: 2px solid black" >  <br>     </h5></p>
+                    <p class="card-text">Lugares: 2</p>
+                    <p class="card-text">Kilometragem: 100.000 Km</p>
+                    <p class="card-text">Preco: R$:500.000,00</p>
+                    <p class="card-text">Telefone: 91444-7884</p>
+                    <p class="card-text">Email: Zezinho@gmail.com</p>
+                    <p class="card-text">Ano: 2020-06-14</p>
+                    <p class="card-text">Numero de Portas: 4</p>
+                    <p class="card-text">Espaco Porta-malas: 500 L</p>
+
+                    <p class="card-text"><small class="text-muted">Atualizado  <?php echo "<strong>" . date('d/m/Y H:i') ." </strong>"; ?></small></p>
+                </div>
             </div>
          </div>
-         <!-- control -->
-         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Left</span>
-         </a>
-         <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Right</span>
-         </a>
+         <div class="card mb-3">
+            <img class="card-img-top" src="assets/img/camaro.jpg" alt="Card image cap">
+            <div class="card-body">
+               <h3 class="card-title">Camaro ZLT</h3>
+               <div class="container">
+                    <p class="card-text" >Cor: <h5 style="background-color:orange; border: 2px solid black"> <br>    </h5></p>
+                    <p class="card-text">Lugares: 4</p>
+                    <p class="card-text">Kilometragem: 150.000 Km</p>
+                    <p class="card-text">Preco: R$:350.000,00</p>
+                    <p class="card-text">Telefone: 98744-7884</p>
+                    <p class="card-text">Email: Laodinho@gmail.com</p>
+                    <p class="card-text">Ano: 2018-02-19</p>
+                    <p class="card-text">Numero de Portas: 4</p>
+                    <p class="card-text">Espaco Porta-malas: 600 L</p>
+
+                    <p class="card-text"><small class="text-muted">Atualizado  <?php echo "<strong>" . date('d/m/Y H:i') ." </strong>"; ?></small></p>
+                </div>
+            </div>
+         </div>
+         <p class="lead">
+            <a class="btn btn-primary btn-lg" href="listaCarros.php" role="button">Veja mais</a>
+         </p>
       </div>
-
-      <?php include 'listaCarros.php'; ?>
-      <?php include 'addCarro.php'; ?>
-      <?php include 'contato.php'; ?>
-
-      <?php include_once 'footer.php'; ?>
-
    </body>
 </html>
-
 <?php
 if (isset($_POST["enviar"])) {
  
