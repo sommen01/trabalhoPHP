@@ -26,7 +26,7 @@
 
             <div class="container">
                <!-- HOME PAGE LINK -->
-               <a href="index.php" class="navbar-brand d-flex align-items-center" >
+               <a href="index.php" class="navbar-brand d-flex align-items-center">
                   <img src="assets/img/carro.png" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
                   <circle cx="12" cy="13" r="4"></circle>
                   </img>

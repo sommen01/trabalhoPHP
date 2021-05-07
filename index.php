@@ -9,7 +9,7 @@ include_once "menu.php";
       <title>Inicio</title>
    </head>
    <body>
-      <!-- MAIN PAGE --> 
+      <!-- MAIN PAGE -->
       <div class="text-center rounded-0">
          <div class="cover-container d-flex h-100 p-3 flex-column text-light" style="background: url('./assets/img/background.jpg') no-repeat center center/cover;">
             <p class="mb-auto"></p>
@@ -53,18 +53,10 @@ include_once "menu.php";
             <span class="sr-only">Right</span>
          </a>
       </div>
+      
+      <?php include 'contato.php'; ?>
+
+      <?php include_once 'footer.php'; ?>
 
    </body>
 </html>
-
-<?php
-if (isset($_POST["enviar"])) {
- 
-  $valor = $_POST["valor"];
-  $cad  = raio($valor);
- 
-  
-}
-
-
-?>

@@ -19,85 +19,116 @@ include_once "menu.php";
 
 <body>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+<!-- JUMBOTRON -->
+<div class="jumbotron bg-dark text-light m-0" style="background: linear-gradient(#000028, #280000);">
+    <div class="container text-center">
+    <h1 class="display-4 font-weight-bold">CONVERSE COM A NOSSA EQUIPE</h1>
+    <p class="lead">Nós ajudaremos você a escolher os produtos e preços certos para a sua necessidade.</p>
+    </div>
+</div>
+
 <div class="container">
-    <h2 class="text-center">Entre em Contato</h2>
-	<div class="row justify-content-center">
-		<div class="col-12 col-md-8 col-lg-6 pb-5">
-                    <form action="executaFormContato.php" method="post">
-                        <div class="card border-primary rounded-0">
-                            <div class="card-header p-0">
-                                <div class="bg-info text-white text-center py-2">
-                                    <h3><i class="fa fa-envelope"></i> Contate-nos</h3>
-                                    <p class="m-0">Estamos a disposição</p>
+
+    <div class="row px-3 py-3 mx-3 my-3">
+        <!-- PAGE TEXT -->
+        <div class="col align-self-center">
+            
+            <div class="row d-flex justify-content-center text-center text-uppercase ">
+                <h1 class="display-3 font-weight-bold">ENTRE EM CONTATO</h1>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <p class="h3">Nossa Central de Ajuda está sempre atualizada e pronta para receber você. Se você não encontrar a resposta que procura, estaremos aqui para ajudar.</p>
+            </div>
+
+        </div>
+        
+        <div class="col bg-light border px-0 py-0 mx-0 my-0">
+            <!-- title form -->
+            <h1 class="display-3 p-3 my-0 bg-dark text-white text-center">
+                <p class="p-3 fa fa-envelope"></p>
+                Contate-nos
+                <p class="h4 m-0 p-0">Estamos a disposição</p>
+            </h1>
+            <!-- CONTACT FORM -->
+            <div class="p-3">
+            
+                <form action="executaFormContato.php" method="post">
+                
+                    <div class="row">
+                        <!-- form items -->
+                        <div class="col">
+
+                            <div class="form-group">
+
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Escreva seu nome" required>
                                 </div>
-                            </div>
-                            <div class="card-body p-3">
-                                <div class="form-group">
-                                    <div class="input-group mb-2">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
-                                        </div>
-                                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Escreva seu nome" required>
+
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
+                                    </div>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@gmail.com" required>
+                                </div>
+                                
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fas fa-address-book text-info"></i></div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="erros" name="categoria" value="Erros" style="margin-top: .3rem; margin-left: -1.25rem;" required>
+                                        <label class="form-check-label pl-2" for="erros">Erros e Problemas</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="sugestao" name="categoria" value="Sugestões" style="margin-top: .3rem; margin-left: -1.25rem" required>
+                                        <label for="sugestao" class="form-check-label pl-2">Sugestões</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="reclamacao" name="categoria" value="Reclamações" style="margin-top: .3rem; margin-left: -1.25rem" required>
+                                        <label for="reclamacao" class="form-check-label pl-2">Reclamações sobre o Serviço</label>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="input-group mb-2">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
-                                        </div>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@gmail.com" required>
+
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
                                     </div>
+                                    <textarea class="form-control" placeholder="Escreva sua mensagem" name = "texto" required></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <div class="input-group mb-2">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="fas fa-address-book text-info"></i></div>
-                                        </div>
-                                        <div class="container p-3 border">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" id="erros" name="categoria" value="Erros" style="margin-top: .3rem; margin-left: -1.25rem;" required>
-                                                <label class="form-check-label pl-2" for="erros">Erros e Problemas</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input type="radio" class="form-check-input" id="sugestao" name="categoria" value="Sugestões" style="margin-top: .3rem; margin-left: -1.25rem" required>
-                                                <label for="sugestao" class="form-check-label pl-2">Sugestões</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input type="radio" class="form-check-input" id="reclamacao" name="categoria" value="Reclamações" style="margin-top: .3rem; margin-left: -1.25rem" required>
-                                                <label for="reclamacao" class="form-check-label pl-2">Reclamações sobre o Serviço</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-group mb-2">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
-                                        </div>
-                                        <textarea class="form-control" placeholder="Escreva sua mensagem" name = "texto" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group"> 
+
+                                <div class="input-group mb-2"> 
                                     <?php 
-                                        if(isset($_SESSION["error"])){
-                                            echo $_SESSION["error"];
-                                            unset($_SESSION["error"]);
-                                        }
+                                    if (isset($_SESSION["error"])) {
+                                        echo $_SESSION["error"];
+                                        unset($_SESSION["error"]);
+                                    }
                                     ?>
                                 </div>
+
                                 <div class="text-center">
-                                    <input type="submit" value="Enviar" name="enviar" class="btn btn-info btn-block rounded-0 py-2">
+                                    <input type="submit" value="Enviar" name="enviar" class="btn btn-primary btn-block">
                                 </div>
+
                             </div>
-
+                        
                         </div>
-                    </form>
-               
+                    
+                    </div>
 
+                </form>
 
-                </div>
-	</div>
+            </div>
+        
+        </div>
+    
+    </div>
+
 </div>
+<?php include_once 'footer.php'; ?>
 </body>
 
 

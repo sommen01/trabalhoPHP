@@ -9,12 +9,10 @@ include_once "menu.php";
       <title>Lista Contatos</title>
    </head>
    <body>
-    
-         <?php 
-                listaContatos();
-         
-          ?>      
       
+      <?php listaContatos(); ?>      
+      
+      <?php include_once 'footer.php'; ?>
    </body>
 </html>
  

@@ -20,11 +20,70 @@ include_once "menu.php";
 
       <!-- CAR CARDS -->
       <div class="container">
-         <div class="row">
-            <div class="col-12">
-               <div class="row p-3 my-3">    
-                  <?php lista(); ?>
 
+         <div class="row">
+         
+            <div class="col-12">
+
+               <div class="row p-3 my-3">
+               
+                  <div class="col-6">
+
+                     <div class="card mb-3">
+                        <img class="card-img-top " src="assets/img/mustanggt.jpg" alt="Card image cap">
+                        <div class="card-body">
+                           <h2 class="card-title font-weight-bold text-center">Mustang GT</h2>
+                           <div class="container-fluid">
+                              <table class="table table-striped card-text">
+                                 <tr>
+                                       <th scope="col">Atributo</th>
+                                       <th scope="col">Caracteristica</th>
+                                 </tr>
+                                 <tr>
+                                    <td>Cor</td>
+                                    <td><h5 style="background-color:red; border: 2px solid black" > <br> </h5></td>
+                                 </tr>
+                                 <tr>
+                                    <td>Lugares</td>
+                                    <td>2</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Kilometragem</td>
+                                    <td>100.000 Km</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Preco</td>
+                                    <td>R$:500.000,00</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Telefone</td>
+                                    <td>91444-7884</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Email</td>
+                                    <td>Zezinho@gmail.com</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Ano</td>
+                                    <td>2020-06-14</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Numero de Portas</td>
+                                    <td>4</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Espaco Porta-malas</td>
+                                    <td>500 L</td>
+                                 </tr>
+                              </table>
+
+                              <p class="card-text"><small class="text-muted">Atualizado  <?php echo "<strong>" . date('d/m/Y H:i') ." </strong>"; ?></small></p>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+                  <?php lista(); ?>
                </div>
             
             </div>
@@ -32,7 +91,7 @@ include_once "menu.php";
          </div>
 
       </div>
-
+      <?php include_once 'footer.php'; ?>
    </body>
 </html>
  
