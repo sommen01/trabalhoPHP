@@ -1,8 +1,7 @@
 <?php
 session_start();
-global $arrayCarros;
+global $arrayCarros, $arrayContato;
 function arrayGlobal($nome, $color, $lugares,$km, $valor, $telefone, $email, $data, $portas, $portaMala, $new_name){
-	var_dump($nome, $color, $lugares,$km, $valor, $telefone, $email, $data, $portas, $portaMala, $new_name);
 	$arrayGlobal =  [	
 		'Nome' => $nome ,
 		'Cor' => $color ,
@@ -16,7 +15,9 @@ function arrayGlobal($nome, $color, $lugares,$km, $valor, $telefone, $email, $da
 		'Porta_mala' => $portaMala,
 		'Nome_imagem' => $new_name
 	];
-	 $_SESSION['arrayCarros'] = $arrayGlobal;
+
+	$_SESSION['arrayCarros'][] = $arrayGlobal;
+	
 	// array_push($_SESSION['arrayCarros'],$arrayGlobal);
 	//var_dump($GLOBALS["arrayCarros"]);
 	header("Location: listaCarros.php");
@@ -41,7 +42,7 @@ function arrayGlobal($nome, $color, $lugares,$km, $valor, $telefone, $email, $da
 function lista(){
 	// $_SESSION['arrayCarros'] = $arrayLocal[[]];
 	// var_dump($arrayLocal);
-	foreach ($_SESSION as $key => $carro) {
+	foreach ($_SESSION['arrayCarros'] as $key => $carro) {
 		echo	"<div class='card mb-3'>";
 		echo	"<img class='card-img-top' src='assets/img/" . $carro['Nome_imagem'] ."' alt='Card image cap'>";
 		echo "<div class='card-body'>";
@@ -63,25 +64,27 @@ function lista(){
 	}
 }
 
-function arrayContato( $nome,$email,$texto){
+function arrayContato($nome,$email,$categoria,$texto){
 	$arrayContato =  [	
 		'NomeContato' => $nome ,
 		'EmailContato' => $email,
+		'CategoriaContato' => $categoria,
 		'Texto' => $texto
 	];
-	 $_SESSION['arrayContato'] = $arrayContato;
-	 header("Location: listaCarros.php");
+	 $_SESSION['arrayContato'][] = $arrayContato;
+	 header("Location: listarContatos.php");
 }
 
 function listaContatos(){
 	// $_SESSION['arrayCarros'] = $arrayLocal[[]];
 	// var_dump($arrayLocal);
-	foreach ($_SESSION as $key => $contato) {
+	foreach ($_SESSION['arrayContato'] as $key => $contato) {
 		echo	"<div class='card mb-3'>";
 		echo "<div class='card-body'>";
-		echo   "<h3 class='card-title'>" . $contato['NomeContato'] . "</h3>";
+		echo "<h3 class='card-title'>" . $contato['NomeContato'] . "</h3>";
 		echo "  	<div class='container'>";
 		echo			"<p class='card-text'>Email: " . $contato['EmailContato'] ."</p>";
+		echo			"<p class='card-text'>Categoria: " . $contato['CategoriaContato'] ."</p>";
 		echo			"<p class='card-text'>Texto: " . $contato['Texto'] ." </p>";
 		echo			"<p class='card-text'><small class='text-muted'>Atualizado <strong>" . date('d/m/Y H:i') ."<strong></small></p>";
 		echo		"</div>";
