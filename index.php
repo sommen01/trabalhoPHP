@@ -54,10 +54,6 @@ include_once "menu.php";
          </a>
       </div>
 
-      <?php include 'listaCarros.php'; ?>
-      <?php include 'addCarro.php'; ?>
-      <?php include 'contato.php'; ?>
-
       <?php include_once 'footer.php'; ?>
 
    </body>
