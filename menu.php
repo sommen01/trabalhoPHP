@@ -21,12 +21,12 @@
    </head>
    <body>
       <!-- NAVBAR -->
-      <div class="fixed-top">
-         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="position-relative">
+         <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-0 rounded-0">
 
             <div class="container">
                <!-- HOME PAGE LINK -->
-               <a href="/trabalhoPhp/index.php" class="navbar-brand d-flex align-items-center" >
+               <a href="index.php" class="navbar-brand d-flex align-items-center" >
                   <img src="assets/img/carro.png" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
                   <circle cx="12" cy="13" r="4"></circle>
                   </img>
@@ -36,7 +36,7 @@
                <div class="collapse navbar-collapse" id="navbarResponsive">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item active">
-                        <a class="nav-link" href="/trabalhoPhp/contato.php">Entre em Contato Conosco</a>
+                        <a class="nav-link" href="contato.php">Entre em Contato</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="#">Sobre Nós</a>
@@ -54,11 +54,11 @@
                   <li class="nav-item dropdown active">
                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais</a>
                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="/trabalhoPhp/addCarro.php">Adicionar um Carro</a>
+                        <a class="dropdown-item" href="addCarro.php">Adicionar um Carro</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/trabalhoPhp/listaCarros.php">Listar Carros</a>
+                        <a class="dropdown-item" href="listaCarros.php">Listar Carros</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/trabalhoPhp/listarContatos.php">Lista de Contatos</a>
+                        <a class="dropdown-item" href="listarContatos.php">Lista de Contatos</a>
                      </div>
                   </li>
                </ul>
