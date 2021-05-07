@@ -9,55 +9,201 @@ include_once "menu.php";
       <title>Lista Carros</title>
    </head>
    <body>
-      <div class="jumbotron">
-         <h1 class="display-4">TurbCar</h1>
-         <p class="lead">O melhor lugar para achar seu carro novo</p>
-         <br>
-         <p class="lead">Lista de Carros</p>
-         <hr class="my-4">
-         <div class="card mb-3">
-            <img class="card-img-top" src="assets/img/mustanggt.jpg" alt="Card image cap">
-            <div class="card-body">
-               <h3 class="card-title">Mustang GT</h3>
-               <div class="container">
-                    <p class="card-text" >Cor: <h5 style="background-color:red; border: 2px solid black" >  <br>     </h5></p>
-                    <p class="card-text">Lugares: 2</p>
-                    <p class="card-text">Kilometragem: 100.000 Km</p>
-                    <p class="card-text">Preco: R$:500.000,00</p>
-                    <p class="card-text">Telefone: 91444-7884</p>
-                    <p class="card-text">Email: Zezinho@gmail.com</p>
-                    <p class="card-text">Ano: 2020-06-14</p>
-                    <p class="card-text">Numero de Portas: 4</p>
-                    <p class="card-text">Espaco Porta-malas: 500 L</p>
-
-                    <p class="card-text"><small class="text-muted">Atualizado  <?php echo "<strong>" . date('d/m/Y H:i') ." </strong>"; ?></small></p>
-                </div>
-            </div>
+      <!-- JUMBOTRON -->
+      <div class="jumbotron bg-dark text-light m-0" style="background: linear-gradient(#000028, #280000);">
+         <div class="container text-center">
+            <h1 class="display-4 font-weight-bold">CATÁLOGO DE CARROS</h1>
+            <p class="lead">Nossa missão é a satisafação do cliente, oferecendo serviço de qualidade com preço baixo.</p>
+            <a class="btn btn-secondary btn-lg" href="/trabalhoPhp/addCarro.php">ADICIONAR UM CARRO</a>
          </div>
-         <div class="card mb-3">
-            <img class="card-img-top" src="assets/img/camaro.jpg" alt="Card image cap">
-            <div class="card-body">
-               <h3 class="card-title">Camaro ZLT</h3>
-               <div class="container">
-                    <p class="card-text" >Cor: <h5 style="background-color:orange; border: 2px solid black"> <br>    </h5></p>
-                    <p class="card-text">Lugares: 4</p>
-                    <p class="card-text">Kilometragem: 150.000 Km</p>
-                    <p class="card-text">Preco: R$:350.000,00</p>
-                    <p class="card-text">Telefone: 98744-7884</p>
-                    <p class="card-text">Email: Laodinho@gmail.com</p>
-                    <p class="card-text">Ano: 2018-02-19</p>
-                    <p class="card-text">Numero de Portas: 4</p>
-                    <p class="card-text">Espaco Porta-malas: 600 L</p>
+      </div>
 
-                    <p class="card-text"><small class="text-muted">Atualizado  <?php echo "<strong>" . date('d/m/Y H:i') ." </strong>"; ?></small></p>
-                </div>
-            </div>
-         </div>
-         <?php 
-                lista();
+      <!-- CAR CARDS -->
+      <div class="container">
+
+         <div class="row">
          
-          ?>      
-      
+            <div class="col-12">
+
+               <div class="row p-3 my-3">
+               
+                  <div class="col-4">
+
+                     <div class="card mb-3">
+                        <img class="card-img-top " src="assets/img/mustanggt.jpg" alt="Card image cap">
+                        <div class="card-body">
+                           <h2 class="card-title font-weight-bold text-center">Mustang GT</h2>
+                           <div class="container-fluid">
+                              <table class="table table-striped card-text">
+                                 <tr>
+                                       <th scope="col">Atributo</th>
+                                       <th scope="col">Caracteristica</th>
+                                 </tr>
+                                 <tr>
+                                    <td>Cor</td>
+                                    <td><h5 style="background-color:red; border: 2px solid black" > <br> </h5></td>
+                                 </tr>
+                                 <tr>
+                                    <td>Lugares</td>
+                                    <td>2</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Kilometragem</td>
+                                    <td>100.000 Km</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Preco</td>
+                                    <td>R$:500.000,00</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Telefone</td>
+                                    <td>91444-7884</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Email</td>
+                                    <td>Zezinho@gmail.com</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Ano</td>
+                                    <td>2020-06-14</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Numero de Portas</td>
+                                    <td>4</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Espaco Porta-malas</td>
+                                    <td>500 L</td>
+                                 </tr>
+                              </table>
+
+                              <p class="card-text"><small class="text-muted">Atualizado  <?php echo "<strong>" . date('d/m/Y H:i') ." </strong>"; ?></small></p>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="col-4">
+                     <div class="card mb-3">
+                        <img class="card-img-top" src="assets/img/camaro.jpg" alt="Card image cap">
+                        <div class="card-body">
+                           <h2 class="card-title font-weight-bold text-center">Camaro ZLT</h2>
+                           <div class="container-fluid">
+                           <table class="table table-striped card-text">
+                                 <tr>
+                                       <th scope="col">Atributo</th>
+                                       <th scope="col">Caracteristica</th>
+                                 </tr>
+                                 <tr>
+                                    <td>Cor</td>
+                                    <td><h5 style="background-color:orange; border: 2px solid black"> <br> </h5></td>
+                                 </tr>
+                                 <tr>
+                                    <td>Lugares</td>
+                                    <td>4</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Kilometragem</td>
+                                    <td>150.000 Km</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Preco</td>
+                                    <td>R$:350.000,00</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Telefone</td>
+                                    <td>98744-7884</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Email</td>
+                                    <td>Laodinho@gmail.com</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Ano</td>
+                                    <td>2018-02-19</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Numero de Portas</td>
+                                    <td>4</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Espaco Porta-malas</td>
+                                    <td>600 L</td>
+                                 </tr>
+                              </table>                           
+                              
+                              <p class="card-text"><small class="text-muted">Atualizado  <?php echo "<strong>" . date('d/m/Y H:i') ." </strong>"; ?></small></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-4">
+                     <div class="card mb-3">
+                        <img class="card-img-top" src="assets/img/camaro.jpg" alt="Card image cap">
+                        <div class="card-body">
+                           <h2 class="card-title font-weight-bold text-center">Camaro ZLT</h2>
+                           <div class="container-fluid">
+                           <table class="table table-striped card-text">
+                                 <tr>
+                                       <th scope="col">Atributo</th>
+                                       <th scope="col">Caracteristica</th>
+                                 </tr>
+                                 <tr>
+                                    <td>Cor</td>
+                                    <td><h5 style="background-color:orange; border: 2px solid black"> <br> </h5></td>
+                                 </tr>
+                                 <tr>
+                                    <td>Lugares</td>
+                                    <td>4</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Kilometragem</td>
+                                    <td>150.000 Km</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Preco</td>
+                                    <td>R$:350.000,00</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Telefone</td>
+                                    <td>98744-7884</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Email</td>
+                                    <td>Laodinho@gmail.com</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Ano</td>
+                                    <td>2018-02-19</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Numero de Portas</td>
+                                    <td>4</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Espaco Porta-malas</td>
+                                    <td>600 L</td>
+                                 </tr>
+                              </table>                           
+                              
+                              <p class="card-text"><small class="text-muted">Atualizado  <?php echo "<strong>" . date('d/m/Y H:i') ." </strong>"; ?></small></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            
+            </div>
+
+         </div>
+
+      </div>
+
+      <?php lista(); ?>
+
    </body>
 </html>
  
