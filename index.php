@@ -59,14 +59,3 @@ include_once "menu.php";
    </body>
 </html>
 
-<?php
-if (isset($_POST["enviar"])) {
- 
-  $valor = $_POST["valor"];
-  $cad  = raio($valor);
- 
-  
-}
-
-
-?>
